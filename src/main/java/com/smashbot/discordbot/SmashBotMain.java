@@ -9,6 +9,7 @@ import java.util.HashMap;
 
 import javax.security.auth.login.LoginException;
 
+import com.smashbot.commands.CoinFlipperCommand;
 import com.smashbot.commands.Command;
 import com.smashbot.commands.CommandParser;
 import com.smashbot.commands.PingCommand;
@@ -33,6 +34,7 @@ public class SmashBotMain {
         }
         
         commands.put("ping", new PingCommand());
+        commands.put("flip", new CoinFlipperCommand());
 
 	}
 	
