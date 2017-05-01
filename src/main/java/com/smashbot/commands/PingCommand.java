@@ -1,6 +1,6 @@
 package com.smashbot.commands;
 
-import com.smashbot.discordbot.Command;
+import com.smashbot.commands.Command;
 
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 

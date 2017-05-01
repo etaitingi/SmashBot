@@ -1,4 +1,4 @@
-package com.smashbot.discordbot;
+package com.smashbot.commands;
 
 import java.util.ArrayList;
 

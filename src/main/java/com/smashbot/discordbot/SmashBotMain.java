@@ -9,9 +9,9 @@ import java.util.HashMap;
 
 import javax.security.auth.login.LoginException;
 
+import com.smashbot.commands.Command;
+import com.smashbot.commands.CommandParser;
 import com.smashbot.commands.PingCommand;
-import com.smashbot.discordbot.Command;
-import com.smashbot.discordbot.CommandParser;
 import com.smashbot.listeners.CoinFlipperListener;
 import com.smashbot.listeners.SmashBotListener;
 
