@@ -13,6 +13,7 @@ import com.smashbot.commands.CoinFlipperCommand;
 import com.smashbot.commands.Command;
 import com.smashbot.commands.CommandParser;
 import com.smashbot.commands.PingCommand;
+import com.smashbot.commands.ReminderCommand;
 import com.smashbot.listeners.CoinFlipperListener;
 import com.smashbot.listeners.SmashBotListener;
 
@@ -35,6 +36,7 @@ public class SmashBotMain {
         
         commands.put("ping", new PingCommand());
         commands.put("flip", new CoinFlipperCommand());
+        commands.put("reminder", new ReminderCommand());
 
 	}
 	
