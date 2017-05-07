@@ -37,6 +37,7 @@ public class SmashBotMain {
         commands.put("ping", new PingCommand());
         commands.put("flip", new CoinFlipperCommand());
         commands.put("reminder", new ReminderCommand());
+	commands.put("trivia", new TriviaCommand());
 
 	}
 	
