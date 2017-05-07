@@ -1,0 +1,313 @@
+package com.smashbot.commands;
+
+import com.smashbot.commands.Command;
+
+import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+
+public class Trivia implements Command{
+
+
+   @Override
+	public boolean called(String[] args, MessageReceivedEvent event) {
+		return true;
+	}
+
+	@Override
+	public void action(String[] args, MessageReceivedEvent event) {
+		
+		if(event.getMessage().getRawContent().toLowerCase().equals("!trivia")){
+			
+			Menu();
+							
+		} else {
+			event.getTextChannel().sendMessage("Do you know how to spell?").queue();
+		}
+		
+	}
+
+	@Override
+	public String help() {
+		return HELP;
+	}
+
+	@Override
+	public void executed(boolean success, MessageReceivedEvent event){
+		return;
+	}
+
+    public static void Menu(){
+        Scanner scan = new Scanner(System.in);
+
+        boolean quit = false;
+
+        while (!quit) {
+
+            System.out.println("Welcome, Please select a Trivia Game" + "\n" +
+                    "1. US History" + "\n" +
+                    "2. Urinary Track Infection " + "\n" +
+                    "3. Music" + "\n" +
+                    "4. Exit"
+            );
+
+
+            String userIn = scan.nextLine();
+
+
+            switch(userIn){
+                case "1":
+                    US_History();
+                    break;
+                case "2":
+                    Urinary_Track_Infection();
+                    break;
+                case "3":
+                    Music();
+                    break;
+                case "4":
+                    System.out.println("Thanks for playing");
+                    quit = true;
+                    break;
+
+            }
+        }
+    }
+
+    private static void Music() {
+
+        boolean quit = false;
+        int total = 0;
+
+        while (!quit) {
+
+            /*
+            First question
+             */
+            System.out.println("1. Whose 2013 world tour was called The Mrs Carter Show?" + "\n" +
+                    "a. Lady Gaga" + "\n" +
+                    "b. Beyonce" + "\n" +
+                    "c. Katty Perry" + "\n" +
+                    "d. Britney Spears"
+            );
+
+            Scanner scan = new Scanner(System.in);
+            String userIn = scan.nextLine();
+
+            if (userIn.equals("b")) {
+
+                System.out.println("Correct");
+                total = total += 1;
+            } else {
+                System.out.println("False");
+            }
+
+            System.out.println("Score: " + total);
+
+            /*
+            Second question
+             */
+            System.out.println("2. How many strings does a violin usually have?" + "\n" +
+                    "a. Three" + "\n" +
+                    "b. Five" + "\n" +
+                    "c. Four" + "\n" +
+                    "d. Six"
+            );
+
+            userIn = scan.nextLine();
+
+            if (userIn.equals("c")) {
+
+                System.out.println("Correct");
+                total = total += 1;
+            } else {
+                System.out.println("False");
+            }
+
+            System.out.println("Score: " + total);
+
+            /*
+            Third question
+             */
+            System.out.println("3. Jimmy Page is an English musician who formed which rock band?" + "\n" +
+                    "a. Led Zepplin" + "\n" +
+                    "b. Kiss" + "\n" +
+                    "c. The Doors" + "\n" +
+                    "d. The Who"
+            );
+
+            userIn = scan.nextLine();
+
+            if (userIn.equals("a")) {
+
+                System.out.println("correct");
+                total = total += 1;
+            } else {
+                System.out.println("False");
+            }
+
+            System.out.println("You have completed the Music Trivia." + "\n" +
+            "final Score: " + total);
+
+            System.out.println("");
+
+            quit = true;
+
+        }
+    }
+
+    private static void Urinary_Track_Infection(){
+
+        boolean quit = false;
+        int total = 0;
+
+        while (!quit) {
+
+            /*
+            First question
+             */
+            System.out.println("1. Are you a sick and perverted individual?" + "\n" +
+                    "1. True" + "\n" +
+                    "2. False "
+            );
+
+            Scanner scan = new Scanner(System.in);
+            String userIn = scan.nextLine();
+
+            if (userIn.equals("1")) {
+
+                System.out.println("correct");
+                total = total += 1;
+            } else {
+                System.out.println("False");
+            }
+
+            System.out.println("Score: " + total);
+
+            /*
+            Second question
+             */
+            System.out.println("2. Do you like to swallow farts?" + "\n" +
+                    "1. True" + "\n" +
+                    "2. False "
+            );
+
+            userIn = scan.nextLine();
+
+            if (userIn.equals("1")) {
+
+                System.out.println("correct");
+                total = total += 1;
+            } else {
+                System.out.println("False");
+            }
+
+            System.out.println("Score: " + total);
+
+            /*
+            Third question
+             */
+            System.out.println("3. Love is the only cure for a urinary track infection?" + "\n" +
+                    "1. True" + "\n" +
+                    "2. False "
+            );
+
+            userIn = scan.nextLine();
+
+            if (userIn.equals("2")) {
+
+                System.out.println("correct");
+                total = total += 1;
+            } else {
+                System.out.println("False");
+            }
+
+            System.out.println("This was a Urinary tack infection. You are scum." + "\n" +
+                    "final Score: " + total);
+
+            System.out.println("");
+
+            quit = true;
+        }
+    }
+
+    public static void US_History(){
+
+        boolean quit = false;
+        int total = 0;
+
+        while (!quit) {
+
+            /*
+            First question
+             */
+            System.out.println("1. Which president served more than two terms?" + "\n" +
+                    "a. George Washington" + "\n" +
+                    "b. Thomas Jefferson" + "\n" +
+                    "c. Abraham Lincoln" + "\n" +
+                    "d. Franklin Delano Roosevelt"
+            );
+
+            Scanner scan = new Scanner(System.in);
+            String userIn = scan.nextLine();
+
+            if (userIn.equals("d")) {
+
+                System.out.println("correct");
+                total = total += 1;
+            } else {
+                System.out.println("False");
+            }
+
+            System.out.println("Score: " + total);
+
+            /*
+            Second question
+             */
+            System.out.println("2. Which country did America buy the Louisiana Purchase from?" + "\n" +
+                    "a. France" + "\n" +
+                    "b. Mexico" + "\n" +
+                    "c. Spain" + "\n" +
+                    "d. England"
+            );
+
+            userIn = scan.nextLine();
+
+            if (userIn.equals("a")) {
+
+                System.out.println("correct");
+                total = total += 1;
+            } else {
+                System.out.println("False");
+            }
+
+            System.out.println("Score: " + total);
+
+            /*
+            Third question
+             */
+            System.out.println("3. What is the deadliest war in American History?" + "\n" +
+                    "a. The French Indian War" + "\n" +
+                    "b. The Vietnam War" + "\n" +
+                    "c. Civil War" + "\n" +
+                    "d. World War II"
+            );
+
+            userIn = scan.nextLine();
+
+            if (userIn.equals("c")) {
+
+                System.out.println("correct");
+                total = total += 1;
+            } else {
+                System.out.println("False");
+            }
+
+            System.out.println("You have completed the US History Trivia." + "\n" +
+                    "final Score: " + total);
+
+            System.out.println("");
+
+            quit = true;
+
+        }
+    }
+}
